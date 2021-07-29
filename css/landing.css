@@ -1,0 +1,29 @@
+/* ============================      Landing Page    ================================== */
+.imgAbsolute{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.btn-outline-primary{
+    background-color: white;
+    border-color: white;
+}
+.btn-check:active+.btn-outline-primary, .btn-check:checked+.btn-outline-primary, 
+.btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, 
+.btn-outline-primary:active{
+    border: 3px solid #226D2F;
+    background-color: #226D2F;
+    color: white;
+    box-shadow: none;
+}
+.btn-outline-primary:active .textBlack , .btn-outline-primary:visited .textBlack ,
+.btn-check:checked+.btn-outline-primary .textBlack ,.btn-outline-primary:hover .textBlack{
+    color: white;
+}
+.btn-outline-primary:hover , .btn-outline-primary:visited, 
+.btn-outline-primary:focus {
+    border: 3px solid #226D2F;
+    background-color: #226D2F;
+    color: white;
+    box-shadow: none;
+}
