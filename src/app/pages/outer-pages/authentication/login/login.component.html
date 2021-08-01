@@ -1,0 +1,55 @@
+<header class="bg-white py-2">
+    <div class="container">
+        <img src="assets/images/Frame.png" class="img-fluid ms-auto d-block" alt="">
+    </div>
+</header>
+<div class="container text-end content py-4">
+    <h2>تسجيل الدخول</h2>
+    <form action="#" class="formAdd pt-4">
+        <div class="row" dir="rtl">
+            <div class="col-md-6 mb-3">
+                <label for="name_en" class="form-label"> إسم الشركة باللغة الإنجليزية / البريد الإلكتروني</label>
+                <div class="input-group" for="name_en" dir="ltr">
+                    <span class="input-group-text"> إجباري *</span>
+                    <input type="text" class="form-control text-end" id="name_en">
+                </div>
+                <small>يطابق نموذج التسجيل</small>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="id_number" class="form-label">رقم البطاقة الضريبية</label>
+                <div class="input-group" for="id_number" dir="ltr">
+                    <span class="input-group-text"> إجباري *</span>
+                    <input type="text" class="form-control text-end" id="id_number">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="password" class="form-label"> كلمة المرور </label>
+                <div class="input-group" for="password" dir="ltr">
+                    <span class="input-group-text"> إجباري *</span>
+                    <input type="password" class="form-control text-end" id="password">
+                </div>
+            </div>
+            <div class="col-md-6 pt-3">
+                <p class="pt-lg-4"><span class="text-muted">هل نسيت كلمة المرور ؟ </span>
+                    <a routerLink="/request-reset-password" class="textGreen">إستعادة كلمة المرور الآن</a>
+                </p>
+            </div>
+            <small dir="rtl">في حالة وجود خطأ ما يرجي التواصل معنا من خلال
+                <a href="https://www.contact@fsdu.com" target="_blanck"><b>contact@fsdu.com</b> </a>
+            </small>
+        </div>
+        <button class="btn btnGreen my-5">إنشاء حساب</button>
+    </form>
+</div>
+<footer class="footer bg-white" dir="rtl">
+    <div class="container">
+        <div class="row pt-2">
+            <div class="col">
+                <p> إدارة الأغذية الخاصة FSDU</p>
+            </div>
+            <div class="col text-start">
+                <p>جميع الحقوق محفوظة 2021 </p>
+            </div>
+        </div>
+    </div>
+</footer>
