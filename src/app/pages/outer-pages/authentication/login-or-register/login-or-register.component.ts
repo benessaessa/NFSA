@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-or-register',
   templateUrl: './login-or-register.component.html',
   styleUrls: ['./login-or-register.component.scss']
 })
-export class LoginOrRegisterComponent implements OnInit {
+export class LoginOrRegisterComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  go_to_page(page: string) {
+    this.router.navigate([page]);
   }
 
 }
