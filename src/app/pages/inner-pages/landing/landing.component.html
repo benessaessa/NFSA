@@ -5,7 +5,8 @@
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off"
                 checked>
-            <label class="btn btn-outline-primary widthCard py-4" for="success-outlined">
+            <label class="btn btn-outline-primary widthCard py-4" for="success-outlined"
+                (click)="go_to_page('factory')">
                 <img src="assets/images/Info.png" class="imgAbsolute" alt="">
                 <img src="assets/images/Factory.png" class="img-fluid" alt="">
                 <h5 class="textBlack pt-3 fw-bold">المصانع</h5>
@@ -13,7 +14,8 @@
         </div>
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="white-outlined" autocomplete="off">
-            <label class="btn btn-outline-primary widthCard py-4" for="white-outlined">
+            <label class="btn btn-outline-primary widthCard py-4" for="white-outlined"
+                (click)="go_to_page('others-manufacturing-company')">
                 <img src="assets/images/Info.png" class="imgAbsolute" alt="">
                 <img src="assets/images/enterprise.png" class="img-fluid" alt="">
                 <h5 class="textBlack pt-3 fw-bold">شركات التصنيع لدي الغير</h5>
@@ -21,7 +23,8 @@
         </div>
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="danger-outline" autocomplete="off">
-            <label class="btn btn-outline-primary widthCard py-4" for="danger-outline">
+            <label class="btn btn-outline-primary widthCard py-4" for="danger-outline"
+                (click)="go_to_page('import-and-export-company')">
                 <img src="assets/images/Info.png" class="imgAbsolute" alt="">
                 <img src="assets/images/import.png" class="img-fluid" alt="">
                 <h5 class="textBlack pt-3 fw-bold"> شركات الإستيراد والتصدير </h5>
@@ -29,7 +32,7 @@
         </div>
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="light-outline" autocomplete="off">
-            <label class="btn btn-outline-primary widthCard py-4" for="light-outline">
+            <label class="btn btn-outline-primary widthCard py-4" for="light-outline" (click)="go_to_page('products')">
                 <img src="assets/images/Info.png" class="imgAbsolute" alt="">
                 <img src="assets/images/package.png" class="img-fluid" alt="">
                 <h5 class="textBlack pt-3 fw-bold"> المنتجات </h5>

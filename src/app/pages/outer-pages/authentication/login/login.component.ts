@@ -17,9 +17,9 @@ export class LoginComponent implements OnInit {
 
   login() {
     localStorage.setItem(environment.application_name + '-' + 'authorization_token', 'test_token');
-    this.appVariables.set_authorization_token(localStorage.getItem(environment.application_name + '-' + 'test_token'));
+    this.appVariables.set_authorization_token('test_token');
 
-    this.router.navigate(['/landing'])
+    setTimeout(() => { this.router.navigate(['/landing']); }, 1000);
   }
 
 }

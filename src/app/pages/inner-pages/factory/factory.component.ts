@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  selector: 'app-factory',
+  templateUrl: './factory.component.html',
+  styleUrls: ['./factory.component.scss']
 })
-export class ProductsComponent {
+export class FactoryComponent {
 
   current_step: number = 1;
 
