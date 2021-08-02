@@ -10,7 +10,7 @@ export class PathGuardService implements CanActivate {
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
         let ReturnedValue = false;
         const Rolse = route.data.roles;
-
+        
         if (Rolse.includes('LOGGED_IN') && this.appVariables.get_authorization_token() !== null) {
             let LoggedInUserRoles = false;
             if (Rolse.length === 1) {
@@ -29,7 +29,7 @@ export class PathGuardService implements CanActivate {
             }
 
             if (Rolse.includes('NOT_LOGGED_IN')) {
-                this.router.navigate(['/home']);
+                this.router.navigate(['/landing']);
             }
         }
         return ReturnedValue;

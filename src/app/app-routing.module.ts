@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'register', loadChildren: () => import('./pages/outer-pages/authentication/register/register.module').then(m => m.RegisterModule), canActivate: [PathGuardService], data: { roles: ['NOT_LOGGED_IN'] } },
   { path: 'request-reset-password', loadChildren: () => import('./pages/outer-pages/authentication/request-reset-password/request-reset-password.module').then(m => m.RequestResetPasswordModule), canActivate: [PathGuardService], data: { roles: ['NOT_LOGGED_IN'] } },
   { path: 'reset-password', loadChildren: () => import('./pages/outer-pages/authentication/reset-password/reset-password.module').then(m => m.ResetPasswordModule), canActivate: [PathGuardService], data: { roles: ['NOT_LOGGED_IN'] } },
+  { path: 'landing', loadChildren: () => import('./pages/inner-pages/landing/landing.module').then(m => m.LandingModule), canActivate: [PathGuardService], data: { roles: ['LOGGED_IN'] } },
   { path: '', redirectTo: 'login-or-register', pathMatch: 'full' },
   { path: '**', redirectTo: 'login-or-register', }
 ];
