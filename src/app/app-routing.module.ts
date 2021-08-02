@@ -12,6 +12,7 @@ const routes: Routes = [
 
   { path: 'landing', loadChildren: () => import('./pages/inner-pages/landing/landing.module').then(m => m.LandingModule), canActivate: [PathGuardService], data: { roles: ['LOGGED_IN'] } },
   { path: 'my-products', loadChildren: () => import('./pages/inner-pages/my-products/my-products.module').then(m => m.MyProductsModule), canActivate: [PathGuardService], data: { roles: ['LOGGED_IN'] } },
+  { path: 'my-account', loadChildren: () => import('./pages/inner-pages/my-account/my-account.module').then(m => m.MyAccountModule), canActivate: [PathGuardService], data: { roles: ['LOGGED_IN'] } },
 
   { path: 'factory', loadChildren: () => import('./pages/inner-pages/factory/factory.module').then(m => m.FactoryModule), canActivate: [PathGuardService], data: { roles: ['LOGGED_IN'] } },
   { path: 'products', loadChildren: () => import('./pages/inner-pages/products/products.module').then(m => m.ProductsModule), canActivate: [PathGuardService], data: { roles: ['LOGGED_IN'] } },
