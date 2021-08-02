@@ -132,17 +132,3 @@ small a {
     color: white;
     box-shadow: none;
 }
-.btn-outline-primary:active .textBlack,
-.btn-outline-primary:visited .textBlack,
-.btn-check:checked + .btn-outline-primary .textBlack,
-.btn-outline-primary:hover .textBlack {
-    color: white;
-}
-.btn-outline-primary:hover,
-.btn-outline-primary:visited,
-.btn-outline-primary:focus {
-    border: 3px solid #226d2f;
-    background-color: #226d2f;
-    color: white;
-    box-shadow: none;
-}

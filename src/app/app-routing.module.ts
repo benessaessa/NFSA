@@ -1,3 +1,4 @@
+import { ProductsComponent } from './pages/inner-pages/products/products.component';
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { LoginOrRegisterComponent } from './pages/outer-pages/authentication/login-or-register/login-or-register.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'reset-password', loadChildren: () => import('./pages/outer-pages/authentication/reset-password/reset-password.module').then(m => m.ResetPasswordModule), canActivate: [PathGuardService], data: { roles: ['NOT_LOGGED_IN'] } },
   { path: 'landing', loadChildren: () => import('./pages/inner-pages/landing/landing.module').then(m => m.LandingModule), canActivate: [PathGuardService], data: { roles: ['LOGGED_IN'] } },
   { path: '', redirectTo: 'login-or-register', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login-or-register', }
+  { path: '**', redirectTo: 'login-or-register', },
+  { path: 'products', component: ProductsComponent }
 ];
 
 const config: ExtraOptions = { useHash: true };
