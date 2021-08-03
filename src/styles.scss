@@ -54,7 +54,13 @@ body {
 }
 .widthCard {
     min-width: 262px;
+    margin-bottom: 1rem;
     position: relative;
+}
+@media screen and (max-width:991px){
+    .widthCard {
+        width: 100%;
+    }
 }
 /* =================================================== */
 .formAdd .input-group-text {
@@ -106,9 +112,10 @@ small a {
     }
 }
 @media screen and (max-width: 500px) {
-    .btnGreen {
+    .btnGreen ,.outGreen ,.btnSend  {
         display: block;
         margin: auto;
+        width: 100%;
     }
 }
 

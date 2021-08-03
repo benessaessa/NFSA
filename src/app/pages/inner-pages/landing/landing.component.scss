@@ -15,7 +15,7 @@
 
 .btnSend{
     background-color: #EEEEEE;
-    width: 262px;
+    min-width: 262px;
     height: 60px;
     border-color: #EEEEEE;
     color: black;
@@ -27,7 +27,7 @@
 }
 
 .outGreen{
-    width: 262px;
+    min-width: 262px;
     height: 60px;
     border-radius: 15px;
     border: 2px solid #226d2f;
