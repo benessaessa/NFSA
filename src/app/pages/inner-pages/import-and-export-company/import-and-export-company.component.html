@@ -620,9 +620,13 @@
                     <p>* إجباري</p>
                 </div>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [style.width]="return_dropdown_width()">
-                    <li (click)="inputs[2][1] = 'الإستيراد للنفس أو للغير '"><a class="dropdown-item text-end cursor-pointer">الإستيراد للنفس أو للغير </a></li>
-                    <li (click)="inputs[2][1] = 'الإستيراد عن طريق التعاقد مع المستورد (مسجل بالهيئة القومية لسلامة الغذاء )'"><a
-                            class="dropdown-item text-end cursor-pointer">الإستيراد عن طريق التعاقد مع المستورد (مسجل بالهيئة القومية لسلامة الغذاء )</a></li>
+                    <li (click)="inputs[2][1] = 'الإستيراد للنفس أو للغير '"><a
+                            class="dropdown-item text-end cursor-pointer">الإستيراد للنفس أو للغير </a></li>
+                    <li
+                        (click)="inputs[2][1] = 'الإستيراد عن طريق التعاقد مع المستورد (مسجل بالهيئة القومية لسلامة الغذاء )'">
+                        <a class="dropdown-item text-end cursor-pointer">الإستيراد عن طريق التعاقد مع المستورد (مسجل
+                            بالهيئة القومية لسلامة الغذاء )</a>
+                    </li>
                 </ul>
 
                 <div class="sub-label-div">
@@ -841,8 +845,7 @@
                     </p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="رقم البطاقة الإستيرادية" [(ngModel)]="inputs[4][2]"
-                        name="input_42">
+                    <input placeholder="رقم البطاقة الإستيرادية" [(ngModel)]="inputs[4][2]" name="input_42">
                     <p>* إجباري</p>
                 </div>
 
@@ -933,8 +936,6 @@
         <input type="file" class="d-none" id="form-5-file-input">
     </form>
 
-</div>
-<div class="container" dir="rtl">
     <app-stepper-actions [current_step]="current_step" (go_to_next_step)="go_to_next_step($event)">
     </app-stepper-actions>
 </div>

@@ -151,6 +151,8 @@ small a {
 
 .col-form-filed {
     .dropdown-menu {
+        z-index: 1031;
+
         .dropdown-item:hover {
             background-color: #226d2f;
             color: #fff;

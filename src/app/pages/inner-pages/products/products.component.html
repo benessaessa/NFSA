@@ -62,11 +62,12 @@
 
             <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(0,3)">رقم التسجيل بالهيئة القومية لسلامة الغذاء  NFSA Reg.No </p>
+                    <p class="input-form-label" *ngIf="check_view_label(0,3)">رقم التسجيل بالهيئة القومية لسلامة الغذاء
+                        NFSA Reg.No </p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="رقم التسجيل بالهيئة القومية لسلامة الغذاء  NFSA Reg.No" [(ngModel)]="inputs[0][3]"
-                        name="input_3">
+                    <input placeholder="رقم التسجيل بالهيئة القومية لسلامة الغذاء  NFSA Reg.No"
+                        [(ngModel)]="inputs[0][3]" name="input_3">
                     <p>* إجباري</p>
                 </div>
 
@@ -84,8 +85,7 @@
                     <p class="input-form-label" *ngIf="check_view_label(0,4)">Brand Name (If registered) </p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="Brand Name (If registered)" [(ngModel)]="inputs[0][4]"
-                        name="input_04">
+                    <input placeholder="Brand Name (If registered)" [(ngModel)]="inputs[0][4]" name="input_04">
                     <p>* إجباري</p>
                 </div>
 
@@ -100,21 +100,28 @@
 
             <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(0,5)">هل تم تسجيله بالعلامات التجارية محليا أو عالميا </p>
+                    <p class="input-form-label" *ngIf="check_view_label(0,5)">هل تم تسجيله بالعلامات التجارية محليا أو
+                        عالميا </p>
                 </div>
                 <div class="input-form-div error-field">
                     <input placeholder="هل تم تسجيله بالعلامات التجارية محليا أو عالميا" [(ngModel)]="inputs[0][5]"
                         name="input_05">
                     <p>* إجباري</p>
-                    <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                    <input type="radio" class="btn-check" name="options-outlined" id="success-outlined"
+                        autocomplete="off" checked>
                     <label class="btn btn-outline-success py-0" for="success-outlined">نعم</label>
 
-                    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+                    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined"
+                        autocomplete="off">
                     <label class="btn btn-outline-danger py-0" for="danger-outlined">لا</label>
                 </div>
 
                 <div class="sub-label-div">
-                    <p class="input-form-sub-label">في حالة وجود علامة تجارية مطلوب رفع شهادة تسجيل العلامة التجارية  </p>
+                    <p class="input-form-sub-label">
+                        ﻓﻰ ﺣﺎﻟﺔ وﺟﻮد ﻋﻠﺎﻣﻪ ﺗﺠﺎرﻳﺔ ﻣﻄﻠﻮب رﻓﻊ ﺷﻬﺎدﺔ ﺗﺴﺠﻴﻞ اﻟﻐﻠﺎﻣﻪ اﻟﺘﺠﺎرﻳﺔ
+                        <br>
+                        أﻭ ﻣﺎ ﻳﻔﻴﺪ إﺛﺒﺎت ﺗﺪاﻮﻟ اﻟﻤﻨﺘﺞ ﺑﻌﻠﺎﻣﺔ ﺗﺠﺎرﻳﺔ
+                    </p>
                     <p class="form-error-div">
                         <img src="assets/images/error-icon.png">
                         <span>يجب ان تملئ هذا الحقل</span>
@@ -141,227 +148,104 @@
 
     <form *ngIf="current_step === 2">
         <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,0)">رﻗﻢ اﻟﺴﺠﻞ اﻟﺘﺠﺎﺮﻳ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="رﻗﻢ اﻟﺴﺠﻞ اﻟﺘﺠﺎﺮﻳ" [(ngModel)]="inputs[1][0]" name="input_0">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,1)">ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input type="text" placeholder="ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ" [(ngModel)]="inputs[1][1]" name="input_1"
-                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_1" class="text-end">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,2)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[1][2]" name="input_2"
-                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_2" class="text-end">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="border-div"></div>
-
-        <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,3)">اﻟﺮﻗﻢ اﻟﻀﺮﻳﺒﻲ /رﻗﻢ اﻟﺘﺴﺠﻴﻞ اﻟﻀﺮﻳﺒﻲ اﻟﻤﻮﺣﺪ
-                    </p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="اﻟﺮﻗﻢ اﻟﻀﺮﻳﺒﻲ /رﻗﻢ اﻟﺘﺴﺠﻴﻞ اﻟﻀﺮﻳﺒﻲ اﻟﻤﻮﺣﺪ" [(ngModel)]="inputs[1][3]"
-                        name="input_3">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,4)">ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ" [(ngModel)]="inputs[1][4]" name="input_4"
-                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_4" class="text-end">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,5)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[1][5]" onfocus="(this.type='date')"
-                        onblur="(this.type='text')" id="date_5" class="text-end" name="input_5">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="border-div"></div>
-
-        <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,6)">رﻗﻢ اﻟﺴﺠﻞ اﻟﺼﻨﺎﻋﻰ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="رﻗﻢ اﻟﺴﺠﻞ اﻟﺼﻨﺎﻋﻰ" [(ngModel)]="inputs[1][6]" name="input_6">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,7)">اﻟﻨﺸﺎط ﺑﺎﻟﺴﺠﻞ اﻟﺼﻨﺎﻋﻰ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="اﻟﻨﺸﺎط ﺑﺎﻟﺴﺠﻞ اﻟﺼﻨﺎﻋﻰ" [(ngModel)]="inputs[1][7]" name="input_7">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(1,8)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[1][8]" name="input_8"
-                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_8" class="text-end">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </form>
-
-
-    <form *ngIf="current_step === 3">
-        <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,0)">ﻋﺪد ﺧﻄﻮط اﻟﺈﻧﺘﺎج</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="ﻋﺪد ﺧﻄﻮط اﻟﺈﻧﺘﺎج" [(ngModel)]="inputs[2][0]" name="input_0">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-form-filed">
+            <div class="col-12 col-form-filed">
                 <div class="input-form-label-div" id="drobdown-div-id">
-                    <p class="input-form-label" *ngIf="check_view_label(2,1)">أﻧﻮاع ﺧﻄﻮط اﻟﺎﻧﺘﺎج اﻟﻤﻌﺘﻤﺪة</p>
+                    <p class="input-form-label" *ngIf="check_view_label(1,0)">Category (List from NFSA)</p>
                 </div>
                 <div class="input-form-div error-field dropdown-toggle cursor-pointer" id="navbarDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <input class="cursor-pointer" placeholder="أﻧﻮاع ﺧﻄﻮط اﻟﺎﻧﺘﺎج اﻟﻤﻌﺘﻤﺪة" [(ngModel)]="inputs[2][1]"
-                        name="input_1" disabled>
+                    <input class="cursor-pointer" placeholder="Category (List from NFSA)" [(ngModel)]="inputs[1][0]"
+                        name="input_0" disabled>
                     <p>* إجباري</p>
                 </div>
+
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [style.width]="return_dropdown_width()">
-                    <li (click)="inputs[2][1] = 'اقراص'"><a class="dropdown-item text-end cursor-pointer">اقراص</a></li>
-                    <li (click)="inputs[2][1] = 'كبسولات صلبة او رخوة'"><a
-                            class="dropdown-item text-end cursor-pointer">كبسولات صلبة او رخوة</a></li>
-                    <li (click)="inputs[2][1] = 'بودرة'"><a class="dropdown-item text-end cursor-pointer">بودرة</a></li>
+                    <li (click)="inputs[1][0] = 'أﻟﺒﺎن رﺿﻊ وﺃﻟﺒﺎن ﺗﻜﻤﻴﻠﻴﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻟﺒﺎن رﺿﻊ وﺃﻟﺒﺎن ﺗﻜﻤﻴﻠﻴﺔ
+                        </a>
+                    </li>
+                    <li (click)="inputs[1][0] = 'أﻏﺬﻳﺔ أﻃﻔﺎل ﻣﺤﻀﺮة أﺳﺎﺳﺎ ﻣﻦ اﻟﺤﺒﻮب'"><a
+                            class="dropdown-item text-end cursor-pointer">أﻏﺬﻳﺔ أﻃﻔﺎل ﻣﺤﻀﺮة أﺳﺎﺳﺎ ﻣﻦ اﻟﺤﺒﻮب</a></li>
+                    <li (click)="inputs[1][0] = 'أﻏﺬﻳﺔ ﻣﻌﻠﺒﺔ ﻟﻠﺮﺿﻊ وﺍﻟﺄﻃﻔﺎل'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻏﺬﻳﺔ ﻣﻌﻠﺒﺔ ﻟﻠﺮﺿﻊ وﺍﻟﺄﻃﻔﺎل
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'أﻏﺬﻳﺔ ﻣﺨﺼﺼﺔ ﻟﻠﺤﺎﻟﺎت اﻟﻔﺴﻴﻮﻟﻮﺟﻴﺔ اﻟﺨﺎﺻﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻏﺬﻳﺔ ﻣﺨﺼﺼﺔ ﻟﻠﺤﺎﻟﺎت اﻟﻔﺴﻴﻮﻟﻮﺟﻴﺔ اﻟﺨﺎﺻﺔ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'أﻏﺬﻳﺔ ﻣﺨﺼﺼﺔ ﻟﻠﺤﺎﻟﺎت اﻟﻤﺮﺿﻴﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻏﺬﻳﺔ ﻣﺨﺼﺼﺔ ﻟﻠﺤﺎﻟﺎت اﻟﻤﺮﺿﻴﺔ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'اﻟﻤﻨﺘﺠﺎت اﻟﻤﻨﺨﻔﻀﺔ ﻓﻲ اﻟﻄﺎﻗﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            اﻟﻤﻨﺘﺠﺎت اﻟﻤﻨﺨﻔﻀﺔ ﻓﻲ اﻟﻄﺎﻗﺔ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'اﻟﻤﻨﺘﺠﺎت اﻟﻤﺮﺗﻔﻌﺔ ﻓﻲ اﻟﻄﺎﻗﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            اﻟﻤﻨﺘﺠﺎت اﻟﻤﺮﺗﻔﻌﺔ ﻓﻲ اﻟﻄﺎﻗﺔ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'أﻏﺬﻳﺔ ﻣﻨﺨﻔﻀﺔ اﻟﺼﻮدﻳﻮم وﺑﺪاﺋﻞ ﻣﻠﺢ اﻟﻄﻌﺎم اﻟﺘﻲ ﺗﺤﻤﻞ اﺩﻋﺎء ﺻﺤﻲ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻏﺬﻳﺔ ﻣﻨﺨﻔﻀﺔ اﻟﺼﻮدﻳﻮم وﺑﺪاﺋﻞ ﻣﻠﺢ اﻟﻄﻌﺎم اﻟﺘﻲ ﺗﺤﻤﻞ اﺩﻋﺎء ﺻﺤﻲ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'أﻏﺬﻳﺔ ﻣﻀﺎف اﻟﻴﻬﺎ ﻓﻴﺘﺎﻣﻴﻨﺎت أﻭ أﻣﻠﺎح ﻣﻌﺪﻧﻴﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻏﺬﻳﺔ ﻣﻀﺎف اﻟﻴﻬﺎ ﻓﻴﺘﺎﻣﻴﻨﺎت أﻭ أﻣﻠﺎح ﻣﻌﺪﻧﻴﺔ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'أﻏﺬﻳﺔ ﻣﻀﺎف اﻟﻴﻬﺎ ﻣﺪﻋﻤﺎت ﺣﻴﻮﻳﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻏﺬﻳﺔ ﻣﻀﺎف اﻟﻴﻬﺎ ﻣﺪﻋﻤﺎت ﺣﻴﻮﻳﺔ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'أﻏﺬﻳﺔ ﺗﺤﺘﻮي ﻋﻠﻰ ﻣﻮاﺩ ﻣﻨﺸﻄﺔ أﻭ ﻣﻘﻮﻳﺔ أﻭ ﻓﺎﺗﺤﺔ ﻟﻠﺸﻬﻴﺔ وﻣﺸﺮوﺑﺎت اﻟﻄﺎﻗﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻏﺬﻳﺔ ﺗﺤﺘﻮي ﻋﻠﻰ ﻣﻮاﺩ ﻣﻨﺸﻄﺔ أﻭ ﻣﻘﻮﻳﺔ أﻭ ﻓﺎﺗﺤﺔ ﻟﻠﺸﻬﻴﺔ وﻣﺸﺮوﺑﺎت اﻟﻄﺎﻗﺔ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'ﻣﻜﻤﻠﺎت ﻏﺬاﺋﻴﺔ ﻟﺎ ﺗﺤﺘﻮي ﻋﻠﻰ ﻣﻮاﺩ ﻟﻬﺎ ﺗﺄﺛﻴﺮ دﻭﺍﺋﻲ ﻣﻌﺎﻟﺞ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            ﻣﻜﻤﻠﺎت ﻏﺬاﺋﻴﺔ ﻟﺎ ﺗﺤﺘﻮي ﻋﻠﻰ ﻣﻮاﺩ ﻟﻬﺎ ﺗﺄﺛﻴﺮ دﻭﺍﺋﻲ ﻣﻌﺎﻟﺞ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'ﻣﻜﻤﻠﺎت ﻏﺬاﺋﻴﺔ ﻟﻠﺮﻳﺎﺿﻴﻴﻦ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            ﻣﻜﻤﻠﺎت ﻏﺬاﺋﻴﺔ ﻟﻠﺮﻳﺎﺿﻴﻴﻦ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'أﻋﺸﺎب وﺗﻮاﺑﻞ ﻣﺪﻮﻧ ﻋﻠﻴﻬﺎ اﺩﻋﺎءﺎﺗ ﺻﺤﻴﺔ'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            أﻋﺸﺎب وﺗﻮاﺑﻞ ﻣﺪﻮﻧ ﻋﻠﻴﻬﺎ اﺩﻋﺎءﺎﺗ ﺻﺤﻴﺔ
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[1][0] = 'اﻟﻤﺤﻠﻴﺎت اﻟﺼﻨﺎﻋﻴﺔ (ﺑﺪاﺋﻞ اﻟﺴﻜﺮ)'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            اﻟﻤﺤﻠﻴﺎت اﻟﺼﻨﺎﻋﻴﺔ (ﺑﺪاﺋﻞ اﻟﺴﻜﺮ)
+                        </a>
+                    </li>
+
+
                 </ul>
 
                 <div class="sub-label-div">
@@ -373,17 +257,36 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-form-filed">
+            <div class="col-12 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,2)">رﻗﻢ اﻟﺘﻠﻴﻔﻮن (اﻟﺨﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
+                    <p class="input-form-label" *ngIf="check_view_label(1,1)">Reg Expiry Date</p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="رﻗﻢ اﻟﺘﻠﻴﻔﻮن (اﻟﺨﺎص ﺑﺎﻟﺘﻮاﺻﻞ)" [(ngModel)]="inputs[2][2]" name="input_2">
+                    <input placeholder="Reg Expiry Date" [(ngModel)]="inputs[1][1]" onfocus="(this.type='date')"
+                        onblur="(this.type='text')" id="date_1" class="text-end" name="input_1">
                     <p>* إجباري</p>
                 </div>
 
                 <div class="sub-label-div">
-                    <p class="input-form-sub-label">(ﺛﺎﺑﺖ وﺧﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,2)">Flavor</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Flavor" [(ngModel)]="inputs[1][2]" name="input_2">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
                     <p class="form-error-div">
                         <img src="assets/images/error-icon.png">
                         <span>يجب ان تملئ هذا الحقل</span>
@@ -392,225 +295,15 @@
             </div>
 
             <div class="col-md-6 col-form-filed col-form-filed-2" *ngIf="!view_another_1">
-                <p (click)="view_another_1 = !view_another_1">+ اﺿﻒ رﻗﻢ ﺗﻠﻴﻔﻮن اﺧﺮ</p>
+                <p (click)="view_another_1 = !view_another_1">+ Add more flavors</p>
             </div>
 
             <div class="col-md-6 col-form-filed" *ngIf="view_another_1">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,3)">رﻗﻢ اﻟﺘﻠﻴﻔﻮن (اﻟﺨﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
+                    <p class="input-form-label" *ngIf="check_view_label(1,3)">Flavor</p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="رﻗﻢ اﻟﺘﻠﻴﻔﻮن (اﻟﺨﺎص ﺑﺎﻟﺘﻮاﺻﻞ)" [(ngModel)]="inputs[2][3]" name="input_3">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label">(ﺛﺎﺑﺖ وﺧﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,4)">رﻗﻢ اﻟﻔﺎﻛﺲ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="رﻗﻢ اﻟﻔﺎﻛﺲ" [(ngModel)]="inputs[2][4]" name="input_4">
-                    <p class="option-p">* اختيارى</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,5)">العنوان</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="العنوان" [(ngModel)]="inputs[2][5]" name="input_5">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label">عنوان اﻟﻤﺮﻛﺰ اﻟﺮﺋﻴﺴﻰ (Head Office)</p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,6)">اﻟﺮﻗﻢ اﻟﺒﺮﻳﺪى</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="اﻟﺮﻗﻢ اﻟﺒﺮﻳﺪى" [(ngModel)]="inputs[2][6]" name="input_6">
-                    <p class="option-p">* اختيارى</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,7)">اﻟﻤﻮﻗﻊ اﻟﺈﻟﻜﺘﺮوﻧﻲ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="اﻟﻤﻮﻗﻊ اﻟﺈﻟﻜﺘﺮوﻧﻲ" [(ngModel)]="inputs[2][7]" name="input_7">
-                    <p class="option-p">* اختيارى</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,8)">اﻟﺒﺮﻳﺪ اﻟﺈﻟﻜﺘﺮوﻧﻲ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="اﻟﺒﺮﻳﺪ اﻟﺈﻟﻜﺘﺮوﻧﻲ" [(ngModel)]="inputs[2][8]" name="input_8">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label">(ﺛﺎﺑﺖ وﺧﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-
-
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,9)">ﻋﺪد اﻟﻤﻮﻇﻔﻴﻦ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="ﻋﺪد اﻟﻤﻮﻇﻔﻴﻦ" [(ngModel)]="inputs[2][9]" name="input_9">
-                    <p class="option-p">* اختيارى</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-6 col-form-filed">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,10)">أﺳﻤﺎء اﻟﺸﺮﻛﺎت اﻟﻤﻮزﻋﺔ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="أﺳﻤﺎء اﻟﺸﺮﻛﺎت اﻟﻤﻮزﻋﺔ" [(ngModel)]="inputs[2][10]" name="input_10">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label">ﺈن وﺟﺪت</p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-
-
-            <div class="col-md-6 col-form-filed col-form-filed-2" *ngIf="!view_another_2">
-                <p (click)="view_another_2 = !view_another_2">+ اﺿﻒ ﻣﻮﺰع اﺧﺮ</p>
-            </div>
-
-            <div class="col-md-6 col-form-filed" *ngIf="view_another_2">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,11)">أﺳﻤﺎء اﻟﺸﺮﻛﺎت اﻟﻤﻮزﻋﺔ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="أﺳﻤﺎء اﻟﺸﺮﻛﺎت اﻟﻤﻮزﻋﺔ" [(ngModel)]="inputs[2][11]" name="input_11">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label">ﺈن وﺟﺪت</p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-
-
-        </div>
-
-
-        <div class="row">
-            <div class="col-12 col-form-filed col-form-filed-2" *ngIf="!view_another_3">
-                <p (click)="view_another_3 = !view_another_3">+ اﺿﻒ عنوان ﻣﺼﻨﻊ اﺧﺮ (أﻛﺜﺮ ﻣﻦ ﻣﺼﻨﻊ)</p>
-            </div>
-
-            <div class="col-12 col-form-filed" *ngIf="view_another_3">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,12)">عنوان ﻣﺼﻨﻊ</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="عنوان ﻣﺼﻨﻊ" [(ngModel)]="inputs[2][12]" name="input_12">
-                    <p>* إجباري</p>
-                </div>
-
-                <div class="sub-label-div">
-                    <p class="input-form-sub-label"></p>
-                    <p class="form-error-div">
-                        <img src="assets/images/error-icon.png">
-                        <span>يجب ان تملئ هذا الحقل</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-12 col-form-filed col-form-filed-2" *ngIf="!view_another_4">
-                <p (click)="view_another_4 = !view_another_4">+ اﺿﻒ ﻋﻨﺎوﻳﻦ أﻣﺎﻛﻦ اﻟﺘﺨﺰﻳﻦ</p>
-            </div>
-
-            <div class="col-12 col-form-filed" *ngIf="view_another_4">
-                <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(2,13)">عنوان مكان التخزين</p>
-                </div>
-                <div class="input-form-div error-field">
-                    <input placeholder="عنوان مكان التخزين" [(ngModel)]="inputs[2][13]" name="input_13">
+                    <input placeholder="Flavor" [(ngModel)]="inputs[1][3]" name="input_3">
                     <p>* إجباري</p>
                 </div>
 
@@ -625,15 +318,357 @@
         </div>
     </form>
 
+    <form *ngIf="current_step === 3">
+        <div class="row">
+            <div class="col-12 col-form-filed">
+                <div class="input-form-label-div" id="drobdown-div-id">
+                    <p class="input-form-label" *ngIf="check_view_label(2,0)">Dosage Form</p>
+                </div>
+                <div class="input-form-div error-field dropdown-toggle cursor-pointer" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <input class="cursor-pointer" placeholder="Dosage Form" [(ngModel)]="inputs[2][0]" name="input_0"
+                        disabled>
+                    <p>* إجباري</p>
+                </div>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [style.width]="return_dropdown_width()">
+                    <li (click)="inputs[2][0] = 'Liquid'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Liquid
+                        </a>
+                    </li>
+                    <li (click)="inputs[2][0] = 'Powder'"><a class="dropdown-item text-end cursor-pointer">Powder</a>
+                    </li>
+                    <li (click)="inputs[2][0] = 'Tablet'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Tablet
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Film Coated tablet'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Film Coated tablet
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Enteric Coated Tablet'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Enteric Coated Tablet
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Chewable Tablet'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Chewable Tablet
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Effervescent Tablet'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Effervescent Tablet
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Dispersable Tablet'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Dispersable Tablet
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Sublingual'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Sublingual
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Soft Gelatin Capsule'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Soft Gelatin Capsule
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Hard Gelatin Capsule'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Hard Gelatin Capsule
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Pellets'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Pellets
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Caplet'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Caplet
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Gummies'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            Gummies
+                        </a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Flakes'">
+                        <a class="dropdown-item text-end cursor-pointer"> Flakes</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Biscuits'">
+                        <a class="dropdown-item text-end cursor-pointer"> Biscuits</a>
+                    </li>
+
+
+                    <li (click)="inputs[2][0] = 'Paste'">
+                        <a class="dropdown-item text-end cursor-pointer"> Paste</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Pieces'">
+                        <a class="dropdown-item text-end cursor-pointer"> Pieces</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Bars'">
+                        <a class="dropdown-item text-end cursor-pointer"> Bars</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Drops'">
+                        <a class="dropdown-item text-end cursor-pointer"> Drops</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Gel'">
+                        <a class="dropdown-item text-end cursor-pointer"> Gel</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Tea Bags'">
+                        <a class="dropdown-item text-end cursor-pointer"> Tea Bags</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Herbs'">
+                        <a class="dropdown-item text-end cursor-pointer"> Herbs</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'oral Dispersable Film'">
+                        <a class="dropdown-item text-end cursor-pointer"> oral Dispersable Film</a>
+                    </li>
+
+
+                    <li (click)="inputs[2][0] = 'Suspension'">
+                        <a class="dropdown-item text-end cursor-pointer"> Suspension</a>
+                    </li>
+
+
+                    <li (click)="inputs[2][0] = 'Rice'">
+                        <a class="dropdown-item text-end cursor-pointer"> Rice</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Spaghetti'">
+                        <a class="dropdown-item text-end cursor-pointer"> Spaghetti</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Noodles'">
+                        <a class="dropdown-item text-end cursor-pointer"> Noodles</a>
+                    </li>
+
+                    <li (click)="inputs[2][0] = 'Others'">
+                        <a class="dropdown-item text-end cursor-pointer"> Others</a>
+                    </li>
+                </ul>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,1)">Physical Character</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Physical Character" [(ngModel)]="inputs[2][1]" name="input_1">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,2)">Pack Description</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Pack Description" [(ngModel)]="inputs[2][2]" name="input_2">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed col-form-filed-2" *ngIf="!view_another_2">
+                <p (click)="view_another_2 = !view_another_2">+ Add more Pack Description</p>
+            </div>
+
+            <div class="col-md-6 col-form-filed" *ngIf="view_another_2">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,3)">Pack Description</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Pack Description" [(ngModel)]="inputs[2][3]" name="input_3">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,4)">Sizes</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Sizes" [(ngModel)]="inputs[2][4]" name="input_4">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed col-form-filed-2" *ngIf="!view_another_3">
+                <p (click)="view_another_3 = !view_another_3">+ Add more Sizes</p>
+            </div>
+
+            <div class="col-md-6 col-form-filed" *ngIf="view_another_3">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,5)">Sizes</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Sizes" [(ngModel)]="inputs[2][5]" name="input_5">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,6)">Shelf Life</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Shelf Life" [(ngModel)]="inputs[2][6]" name="input_6">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,7)">Leaflet </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Leaflet" [(ngModel)]="inputs[2][7]" name="input_7">
+                    <p>* إجباري</p>
+                    <input type="radio" class="btn-check" name="options-outlined" id="success-outlined"
+                        autocomplete="off" checked>
+                    <label class="btn btn-outline-success py-0" for="success-outlined">نعم</label>
+
+                    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined"
+                        autocomplete="off">
+                    <label class="btn btn-outline-danger py-0" for="danger-outlined">لا</label>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed col-form-filed-2" *ngIf="!view_another_4">
+                <p (click)="view_another_4 = !view_another_4">+ Attach here</p>
+            </div>
+
+            <div class="col-md-6 col-form-filed" *ngIf="view_another_4">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,8)">Leaflet </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Leaflet" [(ngModel)]="inputs[2][8]" name="input_8">
+                    <p>* إجباري</p>
+                    <input type="radio" class="btn-check" name="options-outlined_2" id="success-outlined_2"
+                        autocomplete="off" checked>
+                    <label class="btn btn-outline-success py-0" for="success-outlined_2">نعم</label>
+
+                    <input type="radio" class="btn-check" name="options-outlined_2" id="danger-outlined_2"
+                        autocomplete="off">
+                    <label class="btn btn-outline-danger py-0" for="danger-outlined_2">لا</label>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
 
     <form *ngIf="current_step === 4">
         <div class="row">
-            <div class="col-12 col-form-filed">
+            <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(3,0)">اﺳﻢ اﻟﺸﺨﺺ اﻟﻤﺴﺌﻮل</p>
+                    <p class="input-form-label" *ngIf="check_view_label(3,0)">اﻟﻤﻌﺘﻤﺪة ﻣﻦ اﻟﻬﻴﺌﺔ Main Ingredients</p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="اﺳﻢ اﻟﺸﺨﺺ اﻟﻤﺴﺌﻮل" [(ngModel)]="inputs[3][0]" name="input_0">
+                    <input placeholder="اﻟﻤﻌﺘﻤﺪة ﻣﻦ اﻟﻬﻴﺌﺔ Main Ingredients" [(ngModel)]="inputs[3][0]" name="input_0">
                     <p>* إجباري</p>
                 </div>
 
@@ -648,10 +683,10 @@
 
             <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(3,1)">وﻇﻴﻔﺔ اﻟﺸﺨﺺ اﻟﻤﺴﺌﻮل</p>
+                    <p class="input-form-label" *ngIf="check_view_label(3,1)">Allergens (if present)</p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="وﻇﻴﻔﺔ اﻟﺸﺨﺺ اﻟﻤﺴﺌﻮل" [(ngModel)]="inputs[3][1]" name="input_1">
+                    <input placeholder="Allergens (if present)" [(ngModel)]="inputs[3][1]" name="input_1">
                     <p>* إجباري</p>
                 </div>
 
@@ -666,11 +701,10 @@
 
             <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(3,2)">رﻗﻢ اﻟﺒﻄﺎﻗﺔ / ﺟﻮاﺯ اﻟﺴﻔﺮ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل</p>
+                    <p class="input-form-label" *ngIf="check_view_label(3,2)">Warnings</p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="رﻗﻢ اﻟﺒﻄﺎﻗﺔ / ﺟﻮاﺯ اﻟﺴﻔﺮ  ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل" [(ngModel)]="inputs[3][2]"
-                        name="input_2">
+                    <input placeholder="Warnings" [(ngModel)]="inputs[3][2]" name="input_2">
                     <p>* إجباري</p>
                 </div>
 
@@ -685,12 +719,10 @@
 
             <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(3,3)">اﻟﺒﺮﻳﺪ اﻟﺈﻟﻜﺘﺮوﻧﻲ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل (ﺛﺎﺑﺖ
-                        ﻟﻠﺘﻮاﺻﻞ ﻓﻲ ﺎى وﻗﺖ)</p>
+                    <p class="input-form-label" *ngIf="check_view_label(3,3)">Target Age/Sex </p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="اﻟﺒﺮﻳﺪ اﻟﺈﻟﻜﺘﺮوﻧﻲ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل (ﺛﺎﺑﺖ ﻟﻠﺘﻮاﺻﻞ ﻓﻲ ﺎى وﻗﺖ)"
-                        [(ngModel)]="inputs[3][3]" name="input_3">
+                    <input placeholder="Target Age/Sex" [(ngModel)]="inputs[3][3]" name="input_3">
                     <p>* إجباري</p>
                 </div>
 
@@ -705,12 +737,10 @@
 
             <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(3,4)">رﻗﻢ اﻟﻤﻮﺑﺎﻳﻞ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل (ﺛﺎﺑﺖ ﻟﻠﺘﻮاﺻﻞ
-                        ﻓﻲ اى وﻗﺖ)</p>
+                    <p class="input-form-label" *ngIf="check_view_label(3,4)">Dose</p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="رﻗﻢ اﻟﻤﻮﺑﺎﻳﻞ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل (ﺛﺎﺑﺖ ﻟﻠﺘﻮاﺻﻞ ﻓﻲ اى وﻗﺖ)" [(ngModel)]="inputs[3][4]"
-                        name="input_4">
+                    <input placeholder="Dose" [(ngModel)]="inputs[3][4]" name="input_4">
                     <p>* إجباري</p>
                 </div>
 
@@ -725,12 +755,10 @@
 
             <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(3,5)">ﻛﻮد اﻟﺘﺴﺠﻴﻞ ﺑﺎﻟﻬﻴﺌﺔ اﻟﻘﻮﻣﻴﺔ ﻟﺴﻠﺎﻣﺔ اﻟﻐﺬاء
-                        (ﻟﻘﺴﻢ اﻟﺄﻏﺬﻳﺔ اﻟﺨﺎﺻﺔ)</p>
+                    <p class="input-form-label" *ngIf="check_view_label(3,5)">Manufacturing Company</p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="ﻛﻮد اﻟﺘﺴﺠﻴﻞ ﺑﺎﻟﻬﻴﺌﺔ اﻟﻘﻮﻣﻴﺔ ﻟﺴﻠﺎﻣﺔ اﻟﻐﺬاء (ﻟﻘﺴﻢ اﻟﺄﻏﺬﻳﺔ اﻟﺨﺎﺻﺔ)"
-                        [(ngModel)]="inputs[3][5]" name="input_5">
+                    <input placeholder="Manufacturing Company" [(ngModel)]="inputs[3][5]" name="input_5">
                     <p>* إجباري</p>
                 </div>
 
@@ -745,12 +773,119 @@
 
             <div class="col-md-6 col-form-filed">
                 <div class="input-form-label-div">
-                    <p class="input-form-label" *ngIf="check_view_label(3,6)">ﻋﺪد اﻟﻤﻨﺘﺠﺎت اﻟﻤﺮﺧﺼﺔ ﻟﺪى ﻫﻴﺌﺔ ﺳﻠﺎﻣﺔ اﻟﻐﺬاء
+                    <p class="input-form-label" *ngIf="check_view_label(3,6)">Packing Company
                     </p>
                 </div>
                 <div class="input-form-div error-field">
-                    <input placeholder="ﻋﺪد اﻟﻤﻨﺘﺠﺎت اﻟﻤﺮﺧﺼﺔ ﻟﺪى ﻫﻴﺌﺔ ﺳﻠﺎﻣﺔ اﻟﻐﺬاء" [(ngModel)]="inputs[3][6]"
-                        name="input_6">
+                    <input placeholder="Packing Company" [(ngModel)]="inputs[3][6]" name="input_6">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,7)">Applicant Company </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Applicant Company" [(ngModel)]="inputs[3][7]" name="input_7">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,8)">License Holder
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="License Holder" [(ngModel)]="inputs[3][8]" name="input_8">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,9)">Importing Company(Imported Only)
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Importing Company(Imported Only)" [(ngModel)]="inputs[3][9]" name="input_9">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div" id="drobdown-div-id">
+                    <p class="input-form-label" *ngIf="check_view_label(3,10)">Country of Origin</p>
+                </div>
+                <div class="input-form-div error-field dropdown-toggle cursor-pointer" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <input class="cursor-pointer" placeholder="Country of Origin" [(ngModel)]="inputs[3][10]"
+                        name="input_10" disabled>
+                    <p>* إجباري</p>
+                </div>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [style.width]="return_dropdown_width()">
+                    <li (click)="inputs[3][10] = 'option 1'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            option 1
+                        </a>
+                    </li>
+                    <li (click)="inputs[3][10] = 'option 2'">
+                        <a class="dropdown-item text-end cursor-pointer">
+                            option 2
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,11)">Storage conditions
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Storage conditions" [(ngModel)]="inputs[3][11]" name="input_11">
                     <p>* إجباري</p>
                 </div>
 
@@ -827,9 +962,7 @@
 
         <input type="file" class="d-none" id="form-5-file-input">
     </form>
-</div>
 
-<div class="container" dir="rtl">
     <app-stepper-actions [current_step]="current_step" (go_to_next_step)="go_to_next_step($event)">
     </app-stepper-actions>
 </div>
