@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
 
-  current_step: number = 4;
+  current_step: number = 5;
 
   inputs = [
     [null, null, null, null, null, null],

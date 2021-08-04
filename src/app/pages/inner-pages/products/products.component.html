@@ -140,11 +140,8 @@
                     </p>
                 </div>
             </div>
-
-
         </div>
     </form>
-
 
     <form *ngIf="current_step === 2">
         <div class="row">
@@ -900,67 +897,63 @@
         </div>
     </form>
 
-
     <form *ngIf="current_step === 5">
         <div class="row">
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ اﻟﺴﺠﻞ التجارى</p>
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(4,0)">Price (EGP)</p>
                 </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ اﻟﺒﻄﺎﻗﺔ اﻟﻀﺮﻳﺒﻴﺔ</p>
+                <div class="input-form-div error-field">
+                    <input placeholder="Price (EGP)" [(ngModel)]="inputs[4][0]" name="input_0">
+                    <p>* إجباري</p>
                 </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ اﻟﺴﺠﻞ اﻟﺼﻨﺎﻋﻰ</p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ رﺧﺼﺔ اﻟﻤﺼﻨﻊ</p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ اﻟﺒﻄﺎﻗﺔ اﻟﺸﺨﺼﻴﺔ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل اﻟﻤﻜﺘﻮب ﺑﺎﻟﺴﺠﻞ اﻟﺘﺠﺎرﻯ</p>
-                </div>
-            </div>
-
-
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ نموذج ﺗﺴﺠﻴﻞ اﻟﻤﻨﺸﺄة ﺑﻘﺴﻢ اﻟﺄﻏﺬﻳﺔ اﻟﺨﺎﺻﺔ</p>
-                </div>
-            </div>
-
-
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ اﺧﺮ إﻳﺼﺎل ﺳﺪاﺩ اﻟﺮﺳﻮم ﺗﺴﺠﻴﻞ ﻣﻨﺸﺄه ﺑﺎﻟﻬﻴﺌﺔ اﻟﻘﻮﻣﻴﺔ ﻟﺴﻠﺎﻣﺔ اﻟﻐﺬاء</p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ اﺧﺮ ﺗﻘﺮﻳﺮ ﺗﻔﺘﻴﺶ ﻟﻬﻴﺌﺔ اﻟﺪوﺍء اﻟﻤﺼﺮﻳﺔ (ﻓﻰ ﺣﺎﻟﺔ ﻣﺼﻨﻊ دﻭﺍﺋﻰ)</p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="uplod-file-div" (click)="select_file()">
-                    <p>+ ﺗﺤﻤﻴﻞ ﻣﻤﺎرﺳﺎت اﻟﺘﺼﻨﻴﻊ اﻟﺠﻴﺪ PMG (ﻓﻰ ﺣﺎﻟﺔ ﻣﺼﻨﻊ دﻭﺍﺋﻰ)</p>
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(4,1)">Registration type</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Registration type" [(ngModel)]="inputs[4][1]" name="input_1">
+                    <p>* إجباري</p>
+                </div>
 
-        <input type="file" class="d-none" id="form-5-file-input">
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">Local/ Imported/ Under-license</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(4,2)">Marketing Type</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Marketing Type" [(ngModel)]="inputs[4][2]" name="input_2">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">Local/ Export/ Local & Export</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
     </form>
 
     <app-stepper-actions [current_step]="current_step" (go_to_next_step)="go_to_next_step($event)">
