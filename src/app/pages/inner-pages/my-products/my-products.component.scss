@@ -1,0 +1,16 @@
+tbody {
+    tr {
+        cursor: pointer;
+    }
+}
+
+.modal-body {
+    p {
+        margin-bottom: 20px;
+        font-size: 15px;
+
+        @media screen and (max-width: 400px) {
+            font-size: 13px;
+        }
+    }
+}
