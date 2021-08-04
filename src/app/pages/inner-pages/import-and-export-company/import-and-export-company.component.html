@@ -1,3 +1,8 @@
 <app-stepper [current_step]="current_step" [title]="'شركة استيراد و تصدير'" [image]="'import'"
     (change_step)="change_step($event)">
 </app-stepper>
+
+<div class="container" dir="rtl">
+    <app-stepper-actions [current_step]="current_step" (go_to_next_step)="go_to_next_step($event)">
+    </app-stepper-actions>
+</div>

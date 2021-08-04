@@ -5,11 +5,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { StepperModule } from 'src/app/theming/stepper/stepper.module';
+import { StepperActionsModule } from 'src/app/theming/stepper-actions/stepper-actions.module';
 
 @NgModule({
   imports: [
     CommonModule, FormsModule,
-    ReactiveFormsModule, StepperModule,
+    ReactiveFormsModule, StepperModule, StepperActionsModule,
     RouterModule.forChild([
       {
         path: '',

@@ -57,7 +57,7 @@ body {
     margin-bottom: 1rem;
     position: relative;
 }
-@media screen and (max-width:991px){
+@media screen and (max-width: 991px) {
     .widthCard {
         width: 100%;
     }
@@ -112,7 +112,9 @@ small a {
     }
 }
 @media screen and (max-width: 500px) {
-    .btnGreen ,.outGreen ,.btnSend  {
+    .btnGreen,
+    .outGreen,
+    .btnSend {
         display: block;
         margin: auto;
         width: 100%;
@@ -138,4 +140,49 @@ small a {
     background-color: #226d2f;
     color: white;
     box-shadow: none;
+}
+
+*:focus {
+    outline: unset;
+}
+* {
+    font-family: Cairo;
+}
+
+.col-form-filed {
+    .dropdown-menu {
+        .dropdown-item:hover {
+            background-color: #226d2f;
+            color: #fff;
+        }
+    }
+
+    .dropdown-item {
+        padding: 12px 10px;
+    }
+}
+
+.border-div {
+    border: solid 1px rgb(168 166 166 / 50%);
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.uplod-file-div {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 33px 0px;
+    margin-bottom: 30px;
+    background-color: rgba(34, 109, 47, 0.1);
+    border: dashed 2px;
+    cursor: pointer;
+    text-align: center;
+
+    p {
+        margin: unset;
+        font-size: 15px;
+    }
 }

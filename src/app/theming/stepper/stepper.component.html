@@ -24,5 +24,15 @@
             <p class="sub-title">ادخل الطلبات التاليه:</p>
         </div>
     </div>
+</div>
 
+<div class="container sub-stepper-div-container" dir="rtl" *ngIf="check_view_sub_stepper()">
+    <p class="zero-sub-stepper-text" *ngIf="current_step === 5">* ﺟﻤﻴﻊ اﻟﺤﻘﻮل اﺟﺒﺎرﻳﺔ</p>
+    <p class="main-sub-stepper-text" *ngIf="current_step === 3">ﻋﺪد ﺧﻄﻮط اﻟﺈﻧﺘﺎج</p>
+    <p class="main-sub-stepper-text" *ngIf="current_step === 4">اسم الشخص المسئول</p>
+    <p class="main-sub-stepper-text" *ngIf="current_step === 5">المرفقات</p>
+    <p class="second-sub-stepper-text" *ngIf="current_step === 4">* يطابق البطاقة</p>
+    <p class="third-sub-stepper-text" *ngIf="current_step === 5">
+        * ﻳﺘﻢ اﺭﻓﺎق اﺻﻮل اﻟﺎوﺭاق اﻟﺴﺎرﻳﺔ ﻓﻘﻂ وﻟﺎ ﻳﻌﺘﺪ ﺑﺎﻟﺼﻮر اﻭ اﻟﺎوﺭاق اﻟﻤﻨﺘﻬﻴﺔ
+    </p>
 </div>
