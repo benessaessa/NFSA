@@ -1,7 +1,939 @@
 <app-stepper [current_step]="current_step" [title]="'شركة استيراد و تصدير'" [image]="'import'"
     (change_step)="change_step($event)">
 </app-stepper>
+<div class="container" dir="rtl">
+    <form *ngIf="current_step === 1">
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(0,0)">اسم الشركة باللغة الانجليزية</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اسم الشركة باللغة الانجليزية" [(ngModel)]="inputs[0][0]" name="input_0">
+                    <p>* إجباري</p>
+                </div>
 
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">يطابق نموذج التسجيل</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(0,1)">اسم الشركة باللغة العربية</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اسم الشركة باللغة العربية" [(ngModel)]="inputs[0][1]" name="input_1">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">(ﻣﺜﺒﺖ ﺑﺎﻟﺴﺠﻞ اﻟﺘﺠﺎﺮﻳ وﺍﻟﺒﻄﺎﻗﺔ اﻟﻀﺮﻳﺒﻴﺔ) وﻳﻄﺎﺑﻖ ﻧﻤﻮﺬج اﻟﺘﺴﺠﻴﻞ</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(0,2)">Global Location Number GLN</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Global Location Number GLN" [(ngModel)]="inputs[0][2]" name="input_2">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(0,3)">اﻟﺮﻗﻢ اﻟﻌﺎﻟﻤﻲ ﻟﻠﺸﺮﻛﺔ Global Company Prefix
+                        GCP
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﻟﺮﻗﻢ اﻟﻌﺎﻟﻤﻲ ﻟﻠﺸﺮﻛﺔ Global Company Prefix GCP" [(ngModel)]="inputs[0][3]"
+                        name="input_3">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md-12 col-form-filed">
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">
+                        ﻓﻲ ﺣﺎﻟﺔ ﻋﺪم ﺗﻮاﻓﺮ ﻫﺬه اﻟﺤﻘﻮل ﺑﺮﺟﺎء اﻟﻀﻐﻂ ﻋﻠﻲ:
+                        <span class="sub-sub-label">
+                            www.gs1eg.org
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+
+
+    <form *ngIf="current_step === 2">
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,0)">رﻗﻢ اﻟﺴﺠﻞ اﻟﺘﺠﺎﺮي</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رﻗﻢ اﻟﺴﺠﻞ اﻟﺘﺠﺎﺮي" [(ngModel)]="inputs[1][0]" name="input_0">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,1)">ﺗﺎرﻳﺦ اﻟﺈﺻﺪار</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input type="text" placeholder="ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ" [(ngModel)]="inputs[1][1]" name="input_1"
+                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_1" class="text-end">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,2)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[1][2]" name="input_2"
+                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_2" class="text-end">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-div"></div>
+
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,3)">اﻟﺮﻗﻢ اﻟﻀﺮﻳﺒﻲ /رﻗﻢ اﻟﺘﺴﺠﻴﻞ اﻟﻀﺮﻳﺒﻲ اﻟﻤﻮﺣﺪ
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﻟﺮﻗﻢ اﻟﻀﺮﻳﺒﻲ /رﻗﻢ اﻟﺘﺴﺠﻴﻞ اﻟﻀﺮﻳﺒﻲ اﻟﻤﻮﺣﺪ" [(ngModel)]="inputs[1][3]"
+                        name="input_3">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pb-3">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,4)">ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ" [(ngModel)]="inputs[1][4]" name="input_4"
+                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_4" class="text-end">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,5)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[1][5]" onfocus="(this.type='date')"
+                        onblur="(this.type='text')" id="date_5" class="text-end" name="input_5">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <form *ngIf="current_step === 3">
+        <div class="row">
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,2)">رﻗﻢ اﻟﺘﻠﻴﻔﻮن (اﻟﺨﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رﻗﻢ اﻟﺘﻠﻴﻔﻮن (اﻟﺨﺎص ﺑﺎﻟﺘﻮاﺻﻞ)" [(ngModel)]="inputs[2][2]" name="input_2">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">(ﺛﺎﺑﺖ وﺧﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed col-form-filed-2" *ngIf="!view_another_1">
+                <p (click)="view_another_1 = !view_another_1">+ اﺿﻒ رﻗﻢ ﺗﻠﻴﻔﻮن اﺧﺮ</p>
+            </div>
+
+            <div class="col-md-6 col-form-filed" *ngIf="view_another_1">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,3)">رﻗﻢ اﻟﺘﻠﻴﻔﻮن (اﻟﺨﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رﻗﻢ اﻟﺘﻠﻴﻔﻮن (اﻟﺨﺎص ﺑﺎﻟﺘﻮاﺻﻞ)" [(ngModel)]="inputs[2][3]" name="input_3">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">(ﺛﺎﺑﺖ وﺧﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,4)">رﻗﻢ اﻟﻔﺎﻛﺲ</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رﻗﻢ اﻟﻔﺎﻛﺲ" [(ngModel)]="inputs[2][4]" name="input_4">
+                    <p class="option-p">* اختيارى</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,5)">العنوان</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="العنوان" [(ngModel)]="inputs[2][5]" name="input_5">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">عنوان اﻟﻤﺮﻛﺰ اﻟﺮﺋﻴﺴﻰ (Head Office)</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,6)">اﻟﺮﻗﻢ اﻟﺒﺮﻳﺪى</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﻟﺮﻗﻢ اﻟﺒﺮﻳﺪى" [(ngModel)]="inputs[2][6]" name="input_6">
+                    <p class="option-p">* اختيارى</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,7)">اﻟﻤﻮﻗﻊ اﻟﺈﻟﻜﺘﺮوﻧﻲ</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﻟﻤﻮﻗﻊ اﻟﺈﻟﻜﺘﺮوﻧﻲ" [(ngModel)]="inputs[2][7]" name="input_7">
+                    <p class="option-p">* اختيارى</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,8)">اﻟﺒﺮﻳﺪ اﻟﺈﻟﻜﺘﺮوﻧﻲ</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﻟﺒﺮﻳﺪ اﻟﺈﻟﻜﺘﺮوﻧﻲ" [(ngModel)]="inputs[2][8]" name="input_8">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">(ﺛﺎﺑﺖ وﺧﺎص ﺑﺎﻟﺘﻮاﺻﻞ)</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,9)">ﻋﺪد اﻟﻤﻮﻇﻔﻴﻦ</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﻋﺪد اﻟﻤﻮﻇﻔﻴﻦ" [(ngModel)]="inputs[2][9]" name="input_9">
+                    <p class="option-p">* اختيارى</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,10)">أﺳﻤﺎء اﻟﺸﺮﻛﺎت اﻟﻤﻮزﻋﺔ</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="أﺳﻤﺎء اﻟﺸﺮﻛﺎت اﻟﻤﻮزﻋﺔ" [(ngModel)]="inputs[2][10]" name="input_10">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">ﺈن وﺟﺪت</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6 col-form-filed col-form-filed-2" *ngIf="!view_another_2">
+                <p (click)="view_another_2 = !view_another_2">+ اﺿﻒ ﻣﻮزع اﺧﺮ</p>
+            </div>
+
+            <div class="col-md-6 col-form-filed" *ngIf="view_another_2">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,11)">أﺳﻤﺎء اﻟﺸﺮﻛﺎت اﻟﻤﻮزﻋﺔ</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="أﺳﻤﺎء اﻟﺸﺮﻛﺎت اﻟﻤﻮزﻋﺔ" [(ngModel)]="inputs[2][11]" name="input_11">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">ﺈن وﺟﺪت</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </form>
+
+
+    <form *ngIf="current_step === 4">
+        <div class="row">
+            <div class="col-12 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,0)">اﺳﻢ اﻟﺸﺨﺺ اﻟﻤﺴﺌﻮل</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﺳﻢ اﻟﺸﺨﺺ اﻟﻤﺴﺌﻮل" [(ngModel)]="inputs[3][0]" name="input_0">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">ﻳﻜﺘﺐ اﻟﺎﺳﻢ رﺑﺎﻋﻲ </p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,1)">وﻇﻴﻔﺔ اﻟﺸﺨﺺ اﻟﻤﺴﺌﻮل</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="وﻇﻴﻔﺔ اﻟﺸﺨﺺ اﻟﻤﺴﺌﻮل" [(ngModel)]="inputs[3][1]" name="input_1">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,2)">رﻗﻢ اﻟﺒﻄﺎﻗﺔ / ﺟﻮاﺯ اﻟﺴﻔﺮ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رﻗﻢ اﻟﺒﻄﺎﻗﺔ / ﺟﻮاﺯ اﻟﺴﻔﺮ  ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل" [(ngModel)]="inputs[3][2]"
+                        name="input_2">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"> </p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,3)">اﻟﺒﺮﻳﺪ اﻟﺈﻟﻜﺘﺮوﻧﻲ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل (ﺛﺎﺑﺖ
+                        ﻟﻠﺘﻮاﺻﻞ ﻓﻲ ﺎى وﻗﺖ)</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﻟﺒﺮﻳﺪ اﻟﺈﻟﻜﺘﺮوﻧﻲ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل (ﺛﺎﺑﺖ ﻟﻠﺘﻮاﺻﻞ ﻓﻲ ﺎى وﻗﺖ)"
+                        [(ngModel)]="inputs[3][3]" name="input_3">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">ﺛﺎﺑﺖ ﻟﻠﺘﻮاﺻﻞ ﻓﻲ اى وﻗﺖ </p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,4)">رﻗﻢ اﻟﻤﻮﺑﺎﻳﻞ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل (ﺛﺎﺑﺖ ﻟﻠﺘﻮاﺻﻞ
+                        ﻓﻲ اى وﻗﺖ)</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رﻗﻢ اﻟﻤﻮﺑﺎﻳﻞ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل (ﺛﺎﺑﺖ ﻟﻠﺘﻮاﺻﻞ ﻓﻲ اى وﻗﺖ)" [(ngModel)]="inputs[3][4]"
+                        name="input_4">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">ﺛﺎﺑﺖ ﻟﻠﺘﻮاﺻﻞ ﻓﻲ اى وﻗﺖ </p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,5)">ﻛﻮد اﻟﺘﺴﺠﻴﻞ ﺑﺎﻟﻬﻴﺌﺔ اﻟﻘﻮﻣﻴﺔ ﻟﺴﻠﺎﻣﺔ اﻟﻐﺬاء
+                        (ﻟﻘﺴﻢ اﻟﺄﻏﺬﻳﺔ اﻟﺨﺎﺻﺔ)</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﻛﻮد اﻟﺘﺴﺠﻴﻞ ﺑﺎﻟﻬﻴﺌﺔ اﻟﻘﻮﻣﻴﺔ ﻟﺴﻠﺎﻣﺔ اﻟﻐﺬاء (ﻟﻘﺴﻢ اﻟﺄﻏﺬﻳﺔ اﻟﺨﺎﺻﺔ)"
+                        [(ngModel)]="inputs[3][5]" name="input_5">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,6)">ﻋﺪد اﻟﻤﻨﺘﺠﺎت اﻟﻤﺮﺧﺼﺔ ﻟﺪى ﻫﻴﺌﺔ ﺳﻠﺎﻣﺔ اﻟﻐﺬاء
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﻋﺪد اﻟﻤﻨﺘﺠﺎت اﻟﻤﺮﺧﺼﺔ ﻟﺪى ﻫﻴﺌﺔ ﺳﻠﺎﻣﺔ اﻟﻐﺬاء" [(ngModel)]="inputs[3][6]"
+                        name="input_6">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(2,10)">رقم البطاقة الإستيرادية</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رقم البطاقة الإستيرادية" [(ngModel)]="inputs[2][10]" name="input_10">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">ﺈن وﺟﺪت</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,25)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[1][25]" name="input_25"
+                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_25" class="text-end">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-div"></div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div" id="drobdown-div-id">
+                    <p class="input-form-label" *ngIf="check_view_label(2,1)">بيانات الإستيراد</p>
+                </div>
+                <div class="input-form-div error-field dropdown-toggle cursor-pointer" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <input class="cursor-pointer" placeholder="بيانات الإستيراد" [(ngModel)]="inputs[2][1]"
+                        name="input_1" disabled>
+                    <p>* إجباري</p>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" [style.width]="return_dropdown_width()">
+                    <li (click)="inputs[2][1] = 'الإستيراد للنفس أو للغير '"><a class="dropdown-item text-end cursor-pointer">الإستيراد للنفس أو للغير </a></li>
+                    <li (click)="inputs[2][1] = 'الإستيراد عن طريق التعاقد مع المستورد (مسجل بالهيئة القومية لسلامة الغذاء )'"><a
+                            class="dropdown-item text-end cursor-pointer">الإستيراد عن طريق التعاقد مع المستورد (مسجل بالهيئة القومية لسلامة الغذاء )</a></li>
+                </ul>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,1)">اسم الشركة باللغة الانجليزية</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اسم الشركة باللغة الانجليزية" [(ngModel)]="inputs[3][1]" name="input_31">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">يطابق نموذج التسجيل</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,2)">اسم الشركة باللغة العربية</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اسم الشركة باللغة العربية" [(ngModel)]="inputs[3][2]" name="input_32">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label">(ﻣﺜﺒﺖ ﺑﺎﻟﺴﺠﻞ اﻟﺘﺠﺎﺮﻳ وﺍﻟﺒﻄﺎﻗﺔ اﻟﻀﺮﻳﺒﻴﺔ) وﻳﻄﺎﺑﻖ ﻧﻤﻮﺬج اﻟﺘﺴﺠﻴﻞ</p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,3)">Global Location Number GLN</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="Global Location Number GLN" [(ngModel)]="inputs[3][3]" name="input_33">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,4)">اﻟﺮﻗﻢ اﻟﻌﺎﻟﻤﻲ ﻟﻠﺸﺮﻛﺔ Global Company Prefix
+                        GCP
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﻟﺮﻗﻢ اﻟﻌﺎﻟﻤﻲ ﻟﻠﺸﺮﻛﺔ Global Company Prefix GCP" [(ngModel)]="inputs[3][4]"
+                        name="input_34">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,5)">رﻗﻢ اﻟﺴﺠﻞ اﻟﺘﺠﺎﺮي</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رﻗﻢ اﻟﺴﺠﻞ اﻟﺘﺠﺎﺮي" [(ngModel)]="inputs[3][5]" name="input_35">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,6)">ﺗﺎرﻳﺦ اﻟﺈﺻﺪار</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input type="text" placeholder="ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ" [(ngModel)]="inputs[3][6]" name="input_36"
+                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_36" class="text-end">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,7)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[3][7]" name="input_37"
+                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_37" class="text-end">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,8)">اﻟﺮﻗﻢ اﻟﻀﺮﻳﺒﻲ /رﻗﻢ اﻟﺘﺴﺠﻴﻞ اﻟﻀﺮﻳﺒﻲ اﻟﻤﻮﺣﺪ
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="اﻟﺮﻗﻢ اﻟﻀﺮﻳﺒﻲ /رﻗﻢ اﻟﺘﺴﺠﻴﻞ اﻟﻀﺮﻳﺒﻲ اﻟﻤﻮﺣﺪ" [(ngModel)]="inputs[3][8]"
+                        name="input_38">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pb-3">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(3,9)">ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺈﺻﺪاﺭ" [(ngModel)]="inputs[3][9]" name="input_39"
+                        onfocus="(this.type='date')" onblur="(this.type='text')" id="date_39" class="text-end">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(4,1)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[4][1]" onfocus="(this.type='date')"
+                        onblur="(this.type='text')" id="date_41" class="text-end" name="input_41">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(4,2)">رقم البطاقة الإستيرادية
+                    </p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رقم البطاقة الإستيرادية" [(ngModel)]="inputs[4][2]"
+                        name="input_42">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(4,3)">ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="ﺗﺎرﻳﺦ اﻟﺎﻧﺘﻬﺎء" [(ngModel)]="inputs[4][3]" onfocus="(this.type='date')"
+                        onblur="(this.type='text')" id="date_43" class="text-end" name="input_43">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <form *ngIf="current_step === 5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="uplod-file-div" (click)="select_file()">
+                    <p>+ ﺗﺤﻤﻴﻞ اﻟﺴﺠﻞ التجارى للشركة المالكة للمنتجات والشركة المستوردة</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="uplod-file-div" (click)="select_file()">
+                    <p>+ ﺗﺤﻤﻴﻞ اﻟﺒﻄﺎﻗﺔ اﻟﻀﺮﻳﺒﻴﺔ للشركة المالكة للمنتجات والشركة المستوردة</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="uplod-file-div" (click)="select_file()">
+                    <p>+ ﺗﺤﻤﻴﻞ اﻟﺒﻄﺎﻗﺔ اﻟﺸﺨﺼﻴﺔ ﻟﻠﺸﺨﺺ اﻟﻤﺴﺌﻮل اﻟﻤﻜﺘﻮب ﺑﺎﻟﺴﺠﻞ اﻟﺘﺠﺎرﻯ</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="uplod-file-div" (click)="select_file()">
+                    <p>+ ﺗﺤﻤﻴﻞ نموذج ﺗﺴﺠﻴﻞ اﻟﻤﻨﺸﺄة ﺑﻘﺴﻢ اﻟﺄﻏﺬﻳﺔ اﻟﺨﺎﺻﺔ للشركة المالكة للمنتج</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="uplod-file-div" (click)="select_file()">
+                    <p>+ ﺗﺤﻤﻴﻞ اﺧﺮ إﻳﺼﺎل ﺳﺪاﺩ اﻟﺮﺳﻮم ﺗﺴﺠﻴﻞ ﻣﻨﺸﺄه ﺑﺎﻟﻬﻴﺌﺔ اﻟﻘﻮﻣﻴﺔ ﻟﺴﻠﺎﻣﺔ اﻟﻐﺬاء</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="uplod-file-div" (click)="select_file()">
+                    <p>+ تحميل إيصال سداد رسوم التسجيل بقسم الإستيراد</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="uplod-file-div" (click)="select_file()">
+                    <p>+ ﺗﺤﻤﻴﻞ عقود الإستيراد مع المستوردين المسجلين بالهيئة </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="uplod-file-div mb-0" (click)="select_file()">
+                    <p>+ تحميل البطاقة الإستيرادية للشركة المالكة للمنتج أو الشركة المستوردة </p>
+                </div>
+            </div>
+        </div>
+
+        <input type="file" class="d-none" id="form-5-file-input">
+    </form>
+
+</div>
 <div class="container" dir="rtl">
     <app-stepper-actions [current_step]="current_step" (go_to_next_step)="go_to_next_step($event)">
     </app-stepper-actions>
