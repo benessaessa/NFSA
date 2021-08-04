@@ -1,40 +1,43 @@
-<div class="container text-end content py-4" dir="rtl">
+<div class="container text-end content py-4" dir="rtl" *ngIf="!view_success">
     <h2 class="fw-bold">مرحبا بك في إدارة الأغذية الخاصة</h2>
     <p class="text-muted py-3">إختر من الخيارات الموضحة:</p>
     <div class="row pt-3 mb-4">
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off"
                 checked>
-            <label class="btn btn-outline-primary widthCard py-4" for="success-outlined"
-                (click)="go_to_page('factory')">
-                <img src="assets/images/Info.png" class="imgAbsolute" alt="">
-                <img src="assets/images/Factory.png" class="img-fluid" alt="">
+            <label class="btn btn-outline-primary widthCard py-4" for="success-outlined">
+                <img src="assets/images/Info.png" class="imgAbsolute" alt="" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                <img src="assets/images/Factory.png" class="img-fluid" alt="" (click)="go_to_page('factory')">
                 <h5 class="textBlack pt-3 fw-bold">المصانع</h5>
             </label>
         </div>
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="white-outlined" autocomplete="off">
-            <label class="btn btn-outline-primary widthCard py-4" for="white-outlined"
-                (click)="go_to_page('others-manufacturing-company')">
-                <img src="assets/images/Info.png" class="imgAbsolute" alt="">
-                <img src="assets/images/enterprise.png" class="img-fluid" alt="">
+            <label class="btn btn-outline-primary widthCard py-4" for="white-outlined">
+                <img src="assets/images/Info.png" class="imgAbsolute" alt="" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                <img src="assets/images/enterprise.png" class="img-fluid" alt=""
+                    (click)="go_to_page('others-manufacturing-company')">
                 <h5 class="textBlack pt-3 fw-bold">شركات التصنيع لدي الغير</h5>
             </label>
         </div>
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="danger-outline" autocomplete="off">
-            <label class="btn btn-outline-primary widthCard py-4" for="danger-outline"
-                (click)="go_to_page('import-and-export-company')">
-                <img src="assets/images/Info.png" class="imgAbsolute" alt="">
-                <img src="assets/images/import.png" class="img-fluid" alt="">
+            <label class="btn btn-outline-primary widthCard py-4" for="danger-outline">
+                <img src="assets/images/Info.png" class="imgAbsolute" alt="" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                <img src="assets/images/import.png" class="img-fluid" alt=""
+                    (click)="go_to_page('import-and-export-company')">
                 <h5 class="textBlack pt-3 fw-bold"> شركات الإستيراد والتصدير </h5>
             </label>
         </div>
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="light-outline" autocomplete="off">
-            <label class="btn btn-outline-primary widthCard py-4" for="light-outline" (click)="go_to_page('products')">
-                <img src="assets/images/Info.png" class="imgAbsolute" alt="">
-                <img src="assets/images/package.png" class="img-fluid" alt="">
+            <label class="btn btn-outline-primary widthCard py-4" for="light-outline">
+                <img src="assets/images/Info.png" class="imgAbsolute" alt="" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                <img src="assets/images/package.png" class="img-fluid" alt="" (click)="go_to_page('products')">
                 <h5 class="textBlack pt-3 fw-bold"> المنتجات </h5>
             </label>
         </div>
@@ -43,5 +46,26 @@
     <!-- <button class="btn btnGreen my-5 ms-2">إستكمال الطلب</button> -->
     <button class="btn btnGreen my-5 ms-2">إضافة منتجات الآن</button>
     <button class="btn outGreen my-5 ms-2">رؤية جميع منتجاتي</button>
-    <button class="btn btnSend my-5 ms-2">تم إرسال طلبك</button>
+    <button class="btn btnSend my-5 ms-2" (click)="view_success = true">تم إرسال طلبك</button>
 </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    dir="rtl">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="exampleModalLabel">ﻣﺘﻄﻠﺒﺎت اﻟﻤﺼﺎﻧﻊ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>١. اﺳﻢ اﻟﺸﺮﻛﺔ ﺑﺎﻟﻠﻐﺔ اﻟﺎﻧﺠﻠﻴﺰﻳﺔ </p>
+                <p>٢. اﺳﻢ اﻟﺸﺮﻛﺔ ﺑﺎﻟﻠﻐﺔ اﻟﻌﺮﺑﻴﺔ</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-success-message *ngIf="view_success" [message_1]="message_1" [message_2]="message_2" [message_3]="message_3"
+    (button_clicked)="button_clicked($event)">
+</app-success-message>

@@ -13,24 +13,40 @@
     box-shadow: none;
 }
 
-.btnSend{
-    background-color: #EEEEEE;
+.btnSend {
+    background-color: #eeeeee;
     min-width: 262px;
     height: 60px;
-    border-color: #EEEEEE;
+    border-color: #eeeeee;
     color: black;
     border-radius: 15px;
     font-weight: bold;
 }
-.btnSend:hover ,.outGreen:hover{
+.btnSend:hover,
+.outGreen:hover {
     opacity: 0.8;
 }
 
-.outGreen{
+.outGreen {
     min-width: 262px;
     height: 60px;
     border-radius: 15px;
     border: 2px solid #226d2f;
     color: #226d2f;
     font-weight: bold;
+}
+
+.modal-body {
+    p {
+        margin-bottom: 20px;
+        font-size: 15px;
+
+        @media screen and (max-width: 400px) {
+            font-size: 13px;
+        }
+    }
+
+}
+.modal-header .btn-close{
+    margin: -0.5rem auto -0.5rem -0.5rem;
 }
