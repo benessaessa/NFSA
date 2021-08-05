@@ -11,6 +11,12 @@
                 <img src="assets/images/Factory.png" class="img-fluid" alt="" (click)="go_to_page('factory')">
                 <h5 class="textBlack pt-3 fw-bold">المصانع</h5>
             </label>
+
+            <div class="factory-under-card">
+                <p class="first-p">ﺗﻢ اﻟﺎﻧﺘﻬﺎء ﻣﻦ ٣ ﺧﻄﻮات ﻓﻲ اﻟﻄﻠﺐ</p>
+                <p class="second-p">ﺑﺎﻗﻲ ﻟﻚ ﺧﻄﻮﺗﻴﻦ ﻟﺈﻣﻜﺎﻧﻴﺔ اﺭﺳﺎل اﻟﻄﻠﺐ</p>
+            </div>
+
         </div>
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <input type="radio" class="btn-check" name="options-outlined" id="white-outlined" autocomplete="off">
@@ -32,7 +38,9 @@
                 <h5 class="textBlack pt-3 fw-bold"> شركات الإستيراد والتصدير </h5>
             </label>
         </div>
-        <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3 landing-details-index" data-bs-toggle="tooltip"
+            data-bs-placement="top" data-bs-custom-class="white-tooltip" title="ﻳﻤﻜﻨﻚ اﻟﺂن اﺿﺎﻓﺔ اﻟﻤﻨﺘﺠﺎت ﻣﻦ ﻫﻨﺎ"
+            id="tooltip-1">
             <input type="radio" class="btn-check" name="options-outlined" id="light-outline" autocomplete="off">
             <label class="btn btn-outline-primary widthCard py-4" for="light-outline">
                 <img src="assets/images/Info.png" class="imgAbsolute" alt="" data-bs-toggle="modal"
@@ -44,10 +52,13 @@
     </div>
     <button class="btn btnGreen my-5 ms-2">التالي</button>
     <!-- <button class="btn btnGreen my-5 ms-2">إستكمال الطلب</button> -->
-    <button class="btn btnGreen my-5 ms-2">إضافة منتجات الآن</button>
+    <button class="btn btnGreen my-5 ms-2 landing-details-index" (click)="view_back_drop_action()">إضافة منتجات
+        الآن</button>
     <button class="btn outGreen my-5 ms-2">رؤية جميع منتجاتي</button>
     <button class="btn btnSend my-5 ms-2" (click)="view_success = true">تم إرسال طلبك</button>
 </div>
+
+<div [ngClass]="{'back-drob-landing' : view_back_drop}" (click)="view_back_drop = false"></div>
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"

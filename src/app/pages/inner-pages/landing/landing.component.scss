@@ -45,8 +45,43 @@
             font-size: 13px;
         }
     }
-
 }
-.modal-header .btn-close{
+.modal-header .btn-close {
     margin: -0.5rem auto -0.5rem -0.5rem;
+}
+
+.back-drob-landing {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background: #00000059;
+}
+
+.landing-details-index {
+    position: relative;
+    z-index: 4;
+}
+
+.factory-under-card {
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 992px) {
+        max-width: 262px;
+    }
+    p {
+        margin: unset;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .first-p {
+        color: #226d2f;
+    }
+
+    .second-p {
+        color: #000;
+        opacity: 0.5;
+    }
 }
