@@ -2,26 +2,55 @@
     <h2>تسجيل الدخول</h2>
     <form action="#" class="formAdd pt-4">
         <div class="row" dir="rtl">
-            <div class="col-md-6 mb-3">
-                <label for="name_en" class="form-label"> إسم الشركة باللغة الإنجليزية / البريد الإلكتروني</label>
-                <div class="input-group" for="name_en" dir="ltr">
-                    <span class="input-group-text"> إجباري *</span>
-                    <input type="text" class="form-control text-end" id="name_en">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,1)">  إسم الشركة باللغة الإنجليزية / البريد الإلكتروني  </p>
                 </div>
-                <small>يطابق نموذج التسجيل</small>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="id_number" class="form-label">رقم البطاقة الضريبية</label>
-                <div class="input-group" for="id_number" dir="ltr">
-                    <span class="input-group-text"> إجباري *</span>
-                    <input type="text" class="form-control text-end" id="id_number">
+                <div class="input-form-div error-field">
+                    <input placeholder="إسم الشركة باللغة الإنجليزية / البريد الإلكتروني" [(ngModel)]="inputs[1][1]" name="input_1">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <label for="password" class="form-label"> كلمة المرور </label>
-                <div class="input-group" for="password" dir="ltr">
-                    <span class="input-group-text"> إجباري *</span>
-                    <input type="password" class="form-control text-end" id="password">
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,4)">رقم البطاقة الضريبية</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input placeholder="رقم البطاقة الضريبية" [(ngModel)]="inputs[1][4]" name="input_4">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-form-filed">
+                <div class="input-form-label-div">
+                    <p class="input-form-label" *ngIf="check_view_label(1,5)">كلمة المرور</p>
+                </div>
+                <div class="input-form-div error-field">
+                    <input type="password" placeholder="كلمة المرور" [(ngModel)]="inputs[1][5]" name="input_5">
+                    <p>* إجباري</p>
+                </div>
+
+                <div class="sub-label-div">
+                    <p class="input-form-sub-label"></p>
+                    <p class="form-error-div">
+                        <img src="assets/images/error-icon.png">
+                        <span>يجب ان تملئ هذا الحقل</span>
+                    </p>
                 </div>
             </div>
             <div class="col-md-6 pt-3">

@@ -8,6 +8,13 @@ import { Router } from '@angular/router';
 })
 export class RequestResetPasswordComponent {
 
+  inputs = [
+    [null, null, null, null],
+    [null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, '', null, null, null, null, null, null, null, null, null, null, null, null],
+  ]
+
   view_success: boolean = false;
 
   message_1: string = 'تم إرسال الرابط إلي بريدك الإلكتروني بنجاح !';
@@ -22,6 +29,14 @@ export class RequestResetPasswordComponent {
 
   button_clicked(event: any) {
     this.router.navigate(['login'])
+  }
+
+  check_view_label(form_index: number, input_index: number) {
+    if (this.inputs[form_index][input_index] === null || this.inputs[form_index][input_index] === '') {
+      return false;
+    } else {
+      return true;
+    }
   }
 
 }
