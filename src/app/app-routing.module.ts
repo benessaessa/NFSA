@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { LoginOrRegisterComponent } from './pages/outer-pages/authentication/login-or-register/login-or-register.component';
 import { PathGuardService } from './services/path-guard-service';
 
@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: '**', redirectTo: 'login-or-register', },
 ];
 
-const config: ExtraOptions = { useHash: true };
+const config: ExtraOptions = { useHash: true, preloadingStrategy: PreloadAllModules };
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, config)],
