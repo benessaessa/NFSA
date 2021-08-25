@@ -102,13 +102,16 @@ small a {
     text-decoration: none;
     font-weight: bold;
 }
-@media screen and (min-width: 1200px) {
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+@media screen and (max-width: 600px) {
     .footer {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
+        position: unset;
     }
 }
 @media screen and (max-width: 500px) {
