@@ -132,7 +132,7 @@
                 p {
                     padding-right: 1rem;
                     padding-top: 0.5rem;
-                    @media screen and (max-width:500px){
+                    @media screen and (max-width: 500px) {
                         font-size: 30px;
                     }
                 }
@@ -150,10 +150,23 @@
 .sub-stepper-div-container {
     margin-bottom: 20px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media screen and (max-width: 575px) {
+        margin-right: unset;
+        margin-left: unset;
+    }
+
     .zero-sub-stepper-text {
         font-size: 15px;
         color: #e5231e;
-        margin-bottom: 30px;
+        margin: 0 0 30px 0 !important;
+
+        // @media screen and(max-width:767px) {
+        //     text-align: center;
+        // }
     }
 
     .main-sub-stepper-text {
@@ -173,5 +186,10 @@
         opacity: 0.5;
         font-size: 15px;
         margin-bottom: 50px;
+    }
+
+    p {
+        display: block;
+        width: 100%;
     }
 }
